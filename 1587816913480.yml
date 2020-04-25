@@ -1,7 +1,7 @@
 ###############################################################
-# ±¾·¶ÀıÀ´Ô´ÎªÍøÂç
-# YouTube ËÑË÷ ²¨×Ğ·ÖÏí
-# Ô­ÎÄ·¢²¼µØÖ· https://www.v2rayssr.com/clashxx.html
+# æœ¬èŒƒä¾‹æ¥æºä¸ºç½‘ç»œ
+# YouTube æœç´¢ æ³¢ä»”åˆ†äº«
+# åŸæ–‡å‘å¸ƒåœ°å€ https://www.v2rayssr.com/clashxx.html
 ###############################################################
 port: 7890
 socks-port: 7891
@@ -51,74 +51,10 @@ cfw-bypass:
     - <local>
 cfw-latency-timeout: 5000
 
-# ´úÀí½Úµã
+# ä»£ç†èŠ‚ç‚¹
 Proxy:
-###############################################################ÅäÖÃ·Ö¸îÏß
-# Shadowsocks Ö§³ÖµÄ¼ÓÃÜ·½Ê½:
-#   aes-128-gcm aes-192-gcm aes-256-gcm
-#   aes-128-cfb aes-192-cfb aes-256-cfb
-#   aes-128-ctr aes-192-ctr aes-256-ctr
-#   rc4-md5 chacha20-ietf xchacha20
-#   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
- 
-# Shadowsocks ÅäÖÃ·¶±¾
-# µÚÒ»ÖÖÅäÖÃ
-#- name: "ÄãµÄSS½Úµã1"               # Èí¼şÏÔÊ¾µÄ½ÚµãÃû×Ö
-#  type: ss                                  # ´úÀíÀàĞÍ
-#  server: 1.2.4.8                          # ·şÎñÆ÷ IP
-#  port: 443                                 #  ¶Ë¿ÚºÅ
-#  cipher: chacha20-ietf-poly1305   # ¼ÓÃÜ·½·¨
-#  password: "password"                # SS ÃÜÂë
-#  # udp: true                                #Ä¬ÈÏ²»¿ªÆô
-  
-#µÚ¶şÖÖÅäÖÃ
-# Shadowsocks + simple-obfs   ÅäÖÃ·¶±¾
-#- name: "ÄãµÄSS½Úµã2"
-#  type: ss
-#  server: 1.2.4.8
-#  port: 443
-#  cipher: chacha20-ietf-poly1305
-#  password: "password"
-#  plugin: obfs
-#  plugin-opts:                 
-#    mode: tls # or http               #  ´ó²¿·ÖÑ¡Ôñ HTTP
-#    # host: bing.com                  #  Î±×°
- 
-# VMess µÄÅäÖÃ
-#- name: "ÄãµÄV2RAY½Úµã1" # Èí¼şÏÔÊ¾µÄ½ÚµãÃû×Ö
-#  type: vmess # ´úÀíÀàĞÍ
-#  server: v2rayssr.com # ·şÎñÆ÷ IP
-#  port: 443 #  ¶Ë¿ÚºÅ
-#  uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
-#  alterId: 64  #¶îÍâµÄ ID
-#  cipher: auto
-#  #ÉÏÃæ¼¸ĞĞÎª±ØÑ¡²ÎÊı
-#  #ÏÂÃæ¼¸ĞĞÎª¿ÉÑ¡²ÎÊı  ¸ù¾İÄãµÄÅäÖÃÇé¿öÀ´
-#  # udp: true    #Ä¬ÈÏ²»¿ªÆô
-#  # tls: true      #TLS ¿ªÆô
-#  # skip-cert-verify: true     #Ä¬ÈÏ²»¿ªÆô
-#  # network: ws    # ÍøÂ·ÀàĞÍ WS HTTP µÈ
-#  # ws-path: /path  # Â·¾¶
-#  # ws-headers:     #Ä¬ÈÏ²»¿ªÆô
-#  #  Host: v2ray.com    # HOST
-
-# Trojan µÄÅäÖÃ
-#- name: "trojan"
-#  type: trojan
-#  server: server
-#  port: 443
-#  password: yourpsk
-#  # udp: true
-#  # sni: example.com # aka server name
-#  # alpn:
-#  #   - h2
-#  #   - http/1.1
-#  # skip-cert-verify: true
-
-
-
-# ÅäÖÃ¿ªÊ¼
-- name: "V2ray½ÚµãµÄÖ÷»ú²âÊÔ"
+# é…ç½®å¼€å§‹
+- name: "V2rayèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
   type: vmess
   server: v2rayssr.com
   port: 443
@@ -130,68 +66,68 @@ Proxy:
   ws-path: /v2rayssrcom/
   Host: v2rayssr.com
 
-- name: "Trojan½ÚµãµÄÖ÷»ú²âÊÔ"
+- name: "TrojanèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
   type: trojan
   server: 1.dameibao.xyz
   port: 443
   password: b9cf4d72
 
  
-###############################################################ÅäÖÃ·Ö¸îÏß
+###############################################################é…ç½®åˆ†å‰²çº¿
 
-# ´úÀí×é²ßÂÔ
+# ä»£ç†ç»„ç­–ç•¥
 Proxy Group:
 
-# url-test Í¨¹ıÖ¸¶¨µÄ URL ²âÊÔ²¢Ñ¡ÔñÑÓ³Ù×îµÍµÄ½Úµã
-- name: "×Ô¶¯½ÚµãÑ¡Ôñ"
+# url-test é€šè¿‡æŒ‡å®šçš„ URL æµ‹è¯•å¹¶é€‰æ‹©å»¶è¿Ÿæœ€ä½çš„èŠ‚ç‚¹
+- name: "è‡ªåŠ¨èŠ‚ç‚¹é€‰æ‹©"
   type: url-test
   proxies:
-    - "V2ray½ÚµãµÄÖ÷»ú²âÊÔ"
-    - "Trojan½ÚµãµÄÖ÷»ú²âÊÔ"
+    - "V2rayèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+    - "TrojanèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
-# ´úÀí½ÚµãÑ¡Ôñ
+# ä»£ç†èŠ‚ç‚¹é€‰æ‹©
 - name: "PROXY"
   type: select
   proxies:
-    - "×Ô¶¯½ÚµãÑ¡Ôñ"
-    - "V2ray½ÚµãµÄÖ÷»ú²âÊÔ"
-    - "Trojan½ÚµãµÄÖ÷»ú²âÊÔ"
-# °×Ãûµ¥Ä£Ê½ PROXY£¬ºÚÃûµ¥Ä£Ê½ DIRECT
+    - "è‡ªåŠ¨èŠ‚ç‚¹é€‰æ‹©"
+    - "V2rayèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+    - "TrojanèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+# ç™½åå•æ¨¡å¼ PROXYï¼Œé»‘åå•æ¨¡å¼ DIRECT
 - name: "Final"
   type: select
   proxies:
     - "PROXY"
     - "DIRECT"
-# Apple ·şÎñ´úÀí
+# Apple æœåŠ¡ä»£ç†
 - name: "Apple"
   type: select
   proxies:
     - "DIRECT"
     - "PROXY"
-# ¹ú¼ÊÁ÷Ã½Ìå·şÎñ
+# å›½é™…æµåª’ä½“æœåŠ¡
 - name: "GlobalMedia"
   type: select
   proxies:
     - "PROXY"
-    - "V2ray½ÚµãµÄÖ÷»ú²âÊÔ"
-    - "Trojan½ÚµãµÄÖ÷»ú²âÊÔ"
-# ´óÂ½Á÷Ã½ÌåÃæÏò¸Û°ÄÌ¨ÏŞ¶¨·şÎñ
+    - "V2rayèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+    - "TrojanèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+# å¤§é™†æµåª’ä½“é¢å‘æ¸¯æ¾³å°é™å®šæœåŠ¡
 - name: "HKMTMedia"
   type: select
   proxies:
     - "DIRECT"
-    - "V2ray½ÚµãµÄÖ÷»ú²âÊÔ"
-    - "Trojan½ÚµãµÄÖ÷»ú²âÊÔ"
-# ÔËÓªÉÌ¼°ÉùÃûÀÇ½åÍøÕ¾½Ù³Ö
+    - "V2rayèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+    - "TrojanèŠ‚ç‚¹çš„ä¸»æœºæµ‹è¯•"
+# è¿è¥å•†åŠå£°åç‹¼è—‰ç½‘ç«™åŠ«æŒ
 - name: "Hijacking"
   type: select
   proxies:
     - "REJECT"
     - "DIRECT"
 
-# ¹æÔò
+# è§„åˆ™
 Rule:
 # Unbreak
 # > Google
@@ -199,7 +135,7 @@ Rule:
 - DOMAIN,dl.google.com,DIRECT
 - DOMAIN,mtalk.google.com,DIRECT
 
-# Internet Service Providers Hijacking ÔËÓªÉÌ½Ù³Ö
+# Internet Service Providers Hijacking è¿è¥å•†åŠ«æŒ
 - DOMAIN-SUFFIX,17gouwuba.com,Hijacking
 - DOMAIN-SUFFIX,186078.com,Hijacking
 - DOMAIN-SUFFIX,189zj.cn,Hijacking
@@ -355,8 +291,8 @@ Rule:
 - IP-CIDR,220.115.251.25/32,Hijacking,no-resolve
 - IP-CIDR,222.73.156.235/32,Hijacking,no-resolve
 
-# Malware ¶ñÒâÍøÕ¾
-# > ¿ìÑ¹
+# Malware æ¶æ„ç½‘ç«™
+# > å¿«å‹
 # https://zhuanlan.zhihu.com/p/39534279
 - DOMAIN-SUFFIX,kuaizip.com,Hijacking
 # > MacKeeper
@@ -367,7 +303,7 @@ Rule:
 # https://www.zhihu.com/question/281163698/answer/441388130
 - DOMAIN-SUFFIX,flash.cn,Hijacking
 - DOMAIN,geo2.adobe.com,Hijacking
-# > C&J Marketing Ë¼½ÜÂí¿Ë¶¡Èí¼ş
+# > C&J Marketing æ€æ°é©¬å…‹ä¸è½¯ä»¶
 # https://www.zhihu.com/question/46746200
 - DOMAIN-SUFFIX,4009997658.com,Hijacking
 - DOMAIN-SUFFIX,abbyychina.com,Hijacking
@@ -547,7 +483,7 @@ Rule:
 - DOMAIN,hboasia4-i.akamaihd.net,GlobalMedia
 - DOMAIN,hboasia5-i.akamaihd.net,GlobalMedia
 - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,GlobalMedia
-# > »ªÎÄµçÊÓ
+# > åæ–‡ç”µè§†
 # USER-AGENT,HWTVMobile*,GlobalMedia
 - DOMAIN-SUFFIX,5itv.tv,GlobalMedia
 - DOMAIN-SUFFIX,ocnttv.com,GlobalMedia
@@ -555,7 +491,7 @@ Rule:
 - DOMAIN-SUFFIX,hulu.com,GlobalMedia
 - DOMAIN-SUFFIX,huluim.com,GlobalMedia
 - DOMAIN-SUFFIX,hulustream.com,GlobalMedia
-# > Hulu(¥Õ©`¥ë©`)
+# > Hulu(ãƒ•ãƒ¼ãƒ«ãƒ¼)
 - DOMAIN-SUFFIX,happyon.jp,GlobalMedia
 - DOMAIN-SUFFIX,hulu.jp,GlobalMedia
 # > ITV
@@ -626,7 +562,7 @@ Rule:
 - DOMAIN-SUFFIX,phncdn.com,GlobalMedia
 - DOMAIN-SUFFIX,pornhub.com,GlobalMedia
 - DOMAIN-SUFFIX,pornhubpremium.com,GlobalMedia
-# > Ì¨ÍåºÃ
+# > å°æ¹¾å¥½
 # USER-AGENT,TaiwanGood*,GlobalMedia
 - DOMAIN-SUFFIX,skyking.com.tw,GlobalMedia
 - DOMAIN,hamifans.emome.net,GlobalMedia
@@ -652,7 +588,7 @@ Rule:
 - DOMAIN,youtubei.googleapis.com,GlobalMedia
 
 # (HKMTMedia)
-# > ÛÆæË‡Ì¨³Õ¾
+# > æ„›å¥‡è—å°ç£ç«™
 - DOMAIN-SUFFIX,iqiyi.com,HKMTMedia
 - DOMAIN-SUFFIX,71.am,HKMTMedia
 # > bilibili
@@ -1284,7 +1220,7 @@ Rule:
 - DOMAIN-SUFFIX,didialift.com,DIRECT
 - DOMAIN-SUFFIX,didiglobal.com,DIRECT
 - DOMAIN-SUFFIX,udache.com,DIRECT
-# > µ°µ°ÔŞ
+# > è›‹è›‹èµ
 - DOMAIN-SUFFIX,343480.com,DIRECT
 - DOMAIN-SUFFIX,baduziyuan.com,DIRECT
 - DOMAIN-SUFFIX,com-hs-hkdy.com,DIRECT
